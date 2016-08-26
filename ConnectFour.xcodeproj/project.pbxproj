@@ -13,6 +13,10 @@
 		81D707C51D6F8A6D00E5CEA5 /* ConnectFour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D707C31D6F8A6D00E5CEA5 /* ConnectFour.xcdatamodeld */; };
 		81D707C71D6F8A6D00E5CEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D707C61D6F8A6D00E5CEA5 /* Assets.xcassets */; };
 		81D707CA1D6F8A6D00E5CEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D707C81D6F8A6D00E5CEA5 /* LaunchScreen.storyboard */; };
+		81D707D21D6FBC0800E5CEA5 /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */; };
+		81D707D41D70755400E5CEA5 /* CollectionViewHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */; };
+		81D707D61D707B1400E5CEA5 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D51D707B1400E5CEA5 /* GameLogic.swift */; };
+		81D707D81D70843000E5CEA5 /* GameHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		81D707C61D6F8A6D00E5CEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D707C91D6F8A6D00E5CEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D707CB1D6F8A6D00E5CEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
+		81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelperFunctions.swift; sourceTree = "<group>"; };
+		81D707D51D707B1400E5CEA5 /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelperFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,9 @@
 			children = (
 				81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */,
 				81D707BE1D6F8A6D00E5CEA5 /* ViewController.swift */,
+				81D707D91D70857000E5CEA5 /* HelperFunctions */,
+				81D707D51D707B1400E5CEA5 /* GameLogic.swift */,
+				81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */,
 				81D707C01D6F8A6D00E5CEA5 /* Main.storyboard */,
 				81D707C61D6F8A6D00E5CEA5 /* Assets.xcassets */,
 				81D707C81D6F8A6D00E5CEA5 /* LaunchScreen.storyboard */,
@@ -65,6 +76,15 @@
 				81D707C31D6F8A6D00E5CEA5 /* ConnectFour.xcdatamodeld */,
 			);
 			path = ConnectFour;
+			sourceTree = "<group>";
+		};
+		81D707D91D70857000E5CEA5 /* HelperFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */,
+				81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */,
+			);
+			name = HelperFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D707D61D707B1400E5CEA5 /* GameLogic.swift in Sources */,
+				81D707D21D6FBC0800E5CEA5 /* CollectionViewProtocol.swift in Sources */,
 				81D707BF1D6F8A6D00E5CEA5 /* ViewController.swift in Sources */,
 				81D707BD1D6F8A6D00E5CEA5 /* AppDelegate.swift in Sources */,
+				81D707D41D70755400E5CEA5 /* CollectionViewHelperFunctions.swift in Sources */,
 				81D707C51D6F8A6D00E5CEA5 /* ConnectFour.xcdatamodeld in Sources */,
+				81D707D81D70843000E5CEA5 /* GameHelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
