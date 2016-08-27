@@ -15,30 +15,44 @@ enum Turn {
     
     func color() -> UIColor {
         switch self {
-        case .PlayerOne:
+        case Turn.PlayerOne:
             return UIColor.blueColor()
-        case .PlayerTwo:
+        case Turn.PlayerTwo:
             return UIColor.redColor()
+        }
+    }
+    
+    func uniqueIdentifier() -> String {
+        switch self {
+        case Turn.PlayerOne:
+            return "PlayerOne"
+        case Turn.PlayerTwo:
+            return "PlayerTwo"
         }
     }
 }
 
 extension ViewController {
     
-    /// Returns the first cell that hasn't been played on in a given section, or nil if there are no valid cells.
+    /// Returns the item and section of the first valid move in a given section, if no valid move is present returns nil.  When this is called, a cell can be extracted from the collection view.
     /// - parameters:
-    ///   - section: The section to use when finding a valid cell.
-    func validMoveInSection(section: Int) -> UICollectionViewCell? {
-        let cells: Array<UICollectionViewCell> = cellsInSection(section)
+    ///   - section: The section to use when finding a valid move.
+    ///   - board: The board to use to find a valid move from.
+    func validMoveInSection(section: Int, board: Array<String>) -> (Int, Int)? {
+
+        guard let rangeOfMoves: (Int, Int) = rangeOfMovesNotUsedInSection(section, board: board) else { return nil }
         
-        let cellNotInUseTagConst: Int = 0
-        let cellInUseTagConst: Int = 1
+        let item: Int = rangeOfMoves.1
         
-        for cell in cells.reverse() {
-            if cell.tag == cellNotInUseTagConst {
-                cell.tag = cellInUseTagConst
-                return cell
-            }
-        }; return nil
+        return (item, section)
+    }
+
+    /// Returns true if a square hasn't been played on.
+    /// - parameters:
+    ///   - square: The square to check for validity.
+    func squareIsValid(square: String) -> Bool {
+        if square == "" {
+            return true
+        }; return false
     }
 }

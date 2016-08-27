@@ -27,20 +27,13 @@ extension ViewController {
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let section: Int = indexPath.section
-        let cells: Array<UICollectionViewCell> = cellsNotUsedInSection(section)
-        
-        if let validCell: UICollectionViewCell = validMoveInSection(section) {
-            changeColorOfCells(cells, color: UIColor.darkGrayColor())
-            validCell.backgroundColor = currentTurn.color()
-            currentTurn = oppositeTurn(currentTurn)
-        }
+        handlePlayerTurn(indexPath)
     }
     
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        let section: Int = indexPath.section
-        let cells: Array<UICollectionViewCell> = cellsNotUsedInSection(section)
-        
-        changeColorOfCells(cells, color: UIColor.grayColor())
+//        let section: Int = indexPath.section
+//        let cells: Array<UICollectionViewCell> = cellsNotUsedInSection(section)
+//        
+//        changeColorOfCells(cells, color: UIColor.grayColor())
     }
 }

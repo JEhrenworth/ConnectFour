@@ -14,6 +14,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var currentTurn: Turn = Turn.PlayerOne
     
+    var board: Array<String> = [String](count: 42, repeatedValue: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
