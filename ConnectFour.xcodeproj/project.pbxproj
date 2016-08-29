@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81D4CB4C1D73B60D009D9FF1 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */; };
 		81D707BD1D6F8A6D00E5CEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */; };
 		81D707BF1D6F8A6D00E5CEA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707BE1D6F8A6D00E5CEA5 /* ViewController.swift */; };
 		81D707C21D6F8A6D00E5CEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D707C01D6F8A6D00E5CEA5 /* Main.storyboard */; };
@@ -17,9 +18,13 @@
 		81D707D41D70755400E5CEA5 /* CollectionViewHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */; };
 		81D707D61D707B1400E5CEA5 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D51D707B1400E5CEA5 /* GameLogic.swift */; };
 		81D707D81D70843000E5CEA5 /* GameHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */; };
+		81D707DC1D72321700E5CEA5 /* EndGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707DB1D72321700E5CEA5 /* EndGame.swift */; };
+		81D707DE1D72328000E5CEA5 /* GameRangeFinders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */; };
+		81D707E21D73316200E5CEA5 /* DiagonalRangeFinders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707E11D73316200E5CEA5 /* DiagonalRangeFinders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		81D707B91D6F8A6D00E5CEA5 /* ConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D707BE1D6F8A6D00E5CEA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +37,9 @@
 		81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelperFunctions.swift; sourceTree = "<group>"; };
 		81D707D51D707B1400E5CEA5 /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelperFunctions.swift; sourceTree = "<group>"; };
+		81D707DB1D72321700E5CEA5 /* EndGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGame.swift; sourceTree = "<group>"; };
+		81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRangeFinders.swift; sourceTree = "<group>"; };
+		81D707E11D73316200E5CEA5 /* DiagonalRangeFinders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagonalRangeFinders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,7 @@
 				81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */,
 				81D707BE1D6F8A6D00E5CEA5 /* ViewController.swift */,
 				81D707D91D70857000E5CEA5 /* HelperFunctions */,
-				81D707D51D707B1400E5CEA5 /* GameLogic.swift */,
+				81D707E31D7332AE00E5CEA5 /* GameLogic */,
 				81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */,
 				81D707C01D6F8A6D00E5CEA5 /* Main.storyboard */,
 				81D707C61D6F8A6D00E5CEA5 /* Assets.xcassets */,
@@ -81,10 +89,46 @@
 		81D707D91D70857000E5CEA5 /* HelperFunctions */ = {
 			isa = PBXGroup;
 			children = (
-				81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */,
-				81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */,
+				81D707DF1D7232B400E5CEA5 /* CollectionView */,
+				81D707DA1D7231D900E5CEA5 /* Game */,
 			);
 			name = HelperFunctions;
+			sourceTree = "<group>";
+		};
+		81D707DA1D7231D900E5CEA5 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */,
+				81D707E01D73314D00E5CEA5 /* RangeFinders */,
+				81D707DB1D72321700E5CEA5 /* EndGame.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		81D707DF1D7232B400E5CEA5 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		81D707E01D73314D00E5CEA5 /* RangeFinders */ = {
+			isa = PBXGroup;
+			children = (
+				81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */,
+				81D707E11D73316200E5CEA5 /* DiagonalRangeFinders.swift */,
+			);
+			name = RangeFinders;
+			sourceTree = "<group>";
+		};
+		81D707E31D7332AE00E5CEA5 /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				81D707D51D707B1400E5CEA5 /* GameLogic.swift */,
+				81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */,
+			);
+			name = GameLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,12 +203,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D707D61D707B1400E5CEA5 /* GameLogic.swift in Sources */,
+				81D707DE1D72328000E5CEA5 /* GameRangeFinders.swift in Sources */,
+				81D707E21D73316200E5CEA5 /* DiagonalRangeFinders.swift in Sources */,
 				81D707D21D6FBC0800E5CEA5 /* CollectionViewProtocol.swift in Sources */,
 				81D707BF1D6F8A6D00E5CEA5 /* ViewController.swift in Sources */,
 				81D707BD1D6F8A6D00E5CEA5 /* AppDelegate.swift in Sources */,
 				81D707D41D70755400E5CEA5 /* CollectionViewHelperFunctions.swift in Sources */,
+				81D4CB4C1D73B60D009D9FF1 /* GameOver.swift in Sources */,
 				81D707C51D6F8A6D00E5CEA5 /* ConnectFour.xcdatamodeld in Sources */,
 				81D707D81D70843000E5CEA5 /* GameHelperFunctions.swift in Sources */,
+				81D707DC1D72321700E5CEA5 /* EndGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +364,7 @@
 				81D707D01D6F8A6D00E5CEA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

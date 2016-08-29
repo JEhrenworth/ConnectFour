@@ -25,9 +25,9 @@ enum Turn {
     func uniqueIdentifier() -> String {
         switch self {
         case Turn.PlayerOne:
-            return "PlayerOne"
+            return "Player One"
         case Turn.PlayerTwo:
-            return "PlayerTwo"
+            return "Player Two"
         }
     }
 }
@@ -46,7 +46,7 @@ extension ViewController {
         
         return (item, section)
     }
-
+    
     /// Returns true if a square hasn't been played on.
     /// - parameters:
     ///   - square: The square to check for validity.

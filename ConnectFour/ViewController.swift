@@ -12,6 +12,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var turnLabel: UILabel!
+    
     var currentTurn: Turn = Turn.PlayerOne
     
     var board: Array<String> = [String](count: 42, repeatedValue: "")
@@ -22,6 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        turnLabel.text = "\(currentTurn.uniqueIdentifier()) to Play"
     }
 
     override func didReceiveMemoryWarning() {
