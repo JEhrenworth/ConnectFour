@@ -12,11 +12,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var connectFourLabel: UILabel!
+    
     @IBOutlet weak var turnLabel: UILabel!
     
     var currentTurn: Turn = Turn.PlayerOne
     
-    var board: Array<String> = [String](count: 42, repeatedValue: "")
+    var indexOfBestMove: Int = Int()
+    
+    var currentBoard: UInt64 = UInt64()
+    var combinedBoard: UInt64 = UInt64()
+    var boardForPlayerOne: UInt64 = UInt64()
+    var boardForPlayerTwo: UInt64 = UInt64()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +45,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return [UIInterfaceOrientationMask.LandscapeLeft,UIInterfaceOrientationMask.LandscapeRight]
+    }
+    
+    @IBAction func newGameButtonPressed(sender: UIButton) {
+        resetGame()
     }
 
 }

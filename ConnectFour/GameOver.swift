@@ -10,88 +10,53 @@ import UIKit
 
 extension ViewController {
     
-    func gameOver(player: Turn, board: Array<String>, item: Int, section: Int) -> Bool {
+    /// Returns true if the game is over on a board, either because of a draw or a win.
+    /// - parameters:
+    ///   - playerBoard: The current players bitboard.
+    ///   - combinedBoard: The both players combined bitboard. I.e. `bitboardPlayerOne | bitboardPlayerTwo`
+    func gameOver(playerBoard: UInt64, combinedBoard: UInt64) -> Bool {
         
-        if hasWon(player, board: board, item: item, section: section) || draw(board) {
+        if hasNumberOfMovesInARow(playerBoard, numberOfMoves: 4) || draw(combinedBoard) {
+            return true
+        }; return false
+    }
+
+    /// Returns true if the board has more the x number of move in a row on it.
+    /// - parameters: 
+    ///   - board: The board to check for move on.
+    ///   - numberOfMoves: The number of move in a row to check for.  **Must be > 1.**
+    func hasNumberOfMovesInARow(board: UInt64, numberOfMoves: UInt64) -> Bool {
+        
+        if numberOfMoves < 2 {
+            assertionFailure("numberOfMoves must be greater than one ")
+        }
+        
+        let diagonalOne: UInt64 = board & (board >> 6)
+        let horizontal: UInt64 = board & (board >> 7)
+        let diagonalTwo: UInt64 = board & (board >> 8)
+        let vertical: UInt64 = board & (board >> 1)
+        
+        let shiftMultiplier: UInt64 = numberOfMoves - 2
+        let verticalShift: UInt64 = shiftMultiplier
+        
+        let diagonalOneCheck: UInt64 = diagonalOne & (diagonalOne >> (shiftMultiplier * 6)) // check \ diagonal
+        let horizontalCheck: UInt64 = horizontal & (horizontal >> (shiftMultiplier * 7))   // check horizontal -
+        let diagonalTwoCheck: UInt64 = diagonalTwo & (diagonalTwo >> (shiftMultiplier * 8)) // check / diagonal
+        let verticalCheck: UInt64 = vertical & (vertical >> verticalShift)           // check vertical |
+        
+        if diagonalOneCheck != 0 || horizontalCheck != 0 || diagonalTwoCheck != 0 || verticalCheck != 0 {
             return true
         }; return false
     }
     
-    func hasWon(player: Turn, board: Array<String>, item: Int, section: Int) -> Bool {        
-        let hasWon: Bool = hasWonOnVertical(player, board: board, item: item, section: section) ||
-            hasWonOnHorizontal(player, board: board, item: item, section: section) ||
-            hasWonOnDiagonal(player, board: board, item: item, section: section)
-        return hasWon
-    }
-    
-    /// Returns true if a player has won on a diagonal given an arbitrary board.
-    /// - parameters:
-    ///   - player: The player to use when figuring out if the game has been won.
-    ///   - board: The board to search on.
-    ///   - item: The item of the current move.
-    ///   - section: The section of the current move.
-    func hasWonOnDiagonal(player: Turn, board: Array<String>, item: Int, section: Int) -> Bool {
-        var numberOfMovesInARow: Int = Int()
-        let indices: (Array<Int>, Array<Int>) = indicesOfDiagonal(item, section: section)
-        
-        /* Check first diagonal */
-        for index in indices.0 {
-            if board[index] == player.uniqueIdentifier() {
-                numberOfMovesInARow += 1
-            }
-        }; if numberOfMovesInARow >= 4 {
-            return true
-        }; numberOfMovesInARow = 0
-        
-        /* Check second diagonal */
-        for index in indices.1 {
-            if board[index] == player.uniqueIdentifier() {
-                numberOfMovesInARow += 1
-            }
-        }; return numberOfMovesInARow >= 4 ? true : false
-    }
-    
-    /// Returns true if a player has won on a vertical given an arbitrary board.
-    /// - parameters:
-    ///   - player: The player to use when figuring out if the game has been won.
-    ///   - board: The board to search on.
-    ///   - item: The item of the current move.
-    ///   - section: The section of the current move.
-    func hasWonOnVertical(player: Turn, board: Array<String>, item: Int, section: Int) -> Bool {
-        var numberOfMovesInARow: Int = Int()
-        let range: (Int, Int) = rangeOfSection(section)
-        
-        for index in range.0...range.1 {
-            if board[index] == player.uniqueIdentifier() {
-                numberOfMovesInARow += 1
-            }
-        }; return numberOfMovesInARow >= 4 ? true : false
-    }
-    
-    /// Returns true if a player has won on a horizontol given an arbitrary board.
-    /// - parameters:
-    ///   - player: The player to use when figuring out if the game has been won.
-    ///   - board: The board to search on.
-    ///   - item: The item of the current move.
-    ///   - section: The section of the current move.
-    func hasWonOnHorizontal(player: Turn, board: Array<String>, item: Int, section: Int) -> Bool {
-        var numberOfMovesInARow: Int = Int()
-        
-        for index in indicesOfRow(item) {
-            if board[index] == player.uniqueIdentifier() {
-                numberOfMovesInARow += 1
-            }
-        }; return numberOfMovesInARow >= 4 ? true : false
-    }
-    
-    /// Returns true if every square of the board has been taken.
-    /// - parameters:
+    /// Returns true if the current board is a draw.
+    /// - parameters: 
     ///   - board: The board to check for a draw on.
-    func draw(board: Array<String>) -> Bool {
-        for square in board {
-            if squareIsValid(square) {
-                return false
-            }
-        }; return true
+    func draw(board: UInt64) -> Bool {
+        let bitsNeverUsedOnBoard: UInt64 = 0b0000010000001000000100000010000001000000100000011111111111111111
+        let drawBoard: UInt64 = 0b1111111111111111111111111111111111111111111111111111111111111111
+        let draw = (board | bitsNeverUsedOnBoard) == drawBoard
+        
+        return draw
     }
 }

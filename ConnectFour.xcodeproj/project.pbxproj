@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81A1F1D41D78D74700713D77 /* Minimax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1F1D31D78D74700713D77 /* Minimax.swift */; };
+		81A1F1D91D7AF19F00713D77 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1F1D81D7AF19F00713D77 /* Board.swift */; };
+		81A1F1E11D7B37E000713D77 /* ConnectFourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1F1E01D7B37E000713D77 /* ConnectFourTests.swift */; };
+		81A1F1E91D7C436E00713D77 /* ManageGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1F1E81D7C436D00713D77 /* ManageGame.swift */; };
+		81A1F1EB1D7C475000713D77 /* RangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1F1EA1D7C475000713D77 /* RangeTests.swift */; };
 		81D4CB4C1D73B60D009D9FF1 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */; };
 		81D707BD1D6F8A6D00E5CEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */; };
 		81D707BF1D6F8A6D00E5CEA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707BE1D6F8A6D00E5CEA5 /* ViewController.swift */; };
@@ -17,13 +22,28 @@
 		81D707D21D6FBC0800E5CEA5 /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */; };
 		81D707D41D70755400E5CEA5 /* CollectionViewHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */; };
 		81D707D61D707B1400E5CEA5 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D51D707B1400E5CEA5 /* GameLogic.swift */; };
-		81D707D81D70843000E5CEA5 /* GameHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */; };
-		81D707DC1D72321700E5CEA5 /* EndGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707DB1D72321700E5CEA5 /* EndGame.swift */; };
+		81D707D81D70843000E5CEA5 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707D71D70843000E5CEA5 /* HelperFunctions.swift */; };
 		81D707DE1D72328000E5CEA5 /* GameRangeFinders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */; };
-		81D707E21D73316200E5CEA5 /* DiagonalRangeFinders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D707E11D73316200E5CEA5 /* DiagonalRangeFinders.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		81A1F1E31D7B37E000713D77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81D707B11D6F8A6D00E5CEA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81D707B81D6F8A6D00E5CEA5;
+			remoteInfo = ConnectFour;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		81A1F1D31D78D74700713D77 /* Minimax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minimax.swift; sourceTree = "<group>"; };
+		81A1F1D81D7AF19F00713D77 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		81A1F1DE1D7B37DF00713D77 /* ConnectFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A1F1E01D7B37E000713D77 /* ConnectFourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourTests.swift; sourceTree = "<group>"; };
+		81A1F1E21D7B37E000713D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A1F1E81D7C436D00713D77 /* ManageGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageGame.swift; sourceTree = "<group>"; };
+		81A1F1EA1D7C475000713D77 /* RangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeTests.swift; sourceTree = "<group>"; };
 		81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		81D707B91D6F8A6D00E5CEA5 /* ConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,13 +56,18 @@
 		81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
 		81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelperFunctions.swift; sourceTree = "<group>"; };
 		81D707D51D707B1400E5CEA5 /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
-		81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelperFunctions.swift; sourceTree = "<group>"; };
-		81D707DB1D72321700E5CEA5 /* EndGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGame.swift; sourceTree = "<group>"; };
+		81D707D71D70843000E5CEA5 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRangeFinders.swift; sourceTree = "<group>"; };
-		81D707E11D73316200E5CEA5 /* DiagonalRangeFinders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagonalRangeFinders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		81A1F1DB1D7B37DF00713D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81D707B61D6F8A6D00E5CEA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +78,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81A1F1D01D78D6EC00713D77 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				81A1F1D31D78D74700713D77 /* Minimax.swift */,
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
+		81A1F1D51D7AE38400713D77 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				81A1F1D01D78D6EC00713D77 /* AI */,
+				81D707DA1D7231D900E5CEA5 /* GameHelperFunctions */,
+				81D707E31D7332AE00E5CEA5 /* GameLogic */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		81A1F1D61D7AE3E000713D77 /* GameOverLogic */ = {
+			isa = PBXGroup;
+			children = (
+				81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */,
+			);
+			name = GameOverLogic;
+			sourceTree = "<group>";
+		};
+		81A1F1DF1D7B37E000713D77 /* ConnectFourTests */ = {
+			isa = PBXGroup;
+			children = (
+				81A1F1E01D7B37E000713D77 /* ConnectFourTests.swift */,
+				81A1F1EA1D7C475000713D77 /* RangeTests.swift */,
+				81A1F1E21D7B37E000713D77 /* Info.plist */,
+			);
+			path = ConnectFourTests;
+			sourceTree = "<group>";
+		};
 		81D707B01D6F8A6D00E5CEA5 = {
 			isa = PBXGroup;
 			children = (
 				81D707BB1D6F8A6D00E5CEA5 /* ConnectFour */,
+				81A1F1DF1D7B37E000713D77 /* ConnectFourTests */,
 				81D707BA1D6F8A6D00E5CEA5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				81D707B91D6F8A6D00E5CEA5 /* ConnectFour.app */,
+				81A1F1DE1D7B37DF00713D77 /* ConnectFourTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,9 +137,8 @@
 			children = (
 				81D707BC1D6F8A6D00E5CEA5 /* AppDelegate.swift */,
 				81D707BE1D6F8A6D00E5CEA5 /* ViewController.swift */,
-				81D707D91D70857000E5CEA5 /* HelperFunctions */,
-				81D707E31D7332AE00E5CEA5 /* GameLogic */,
-				81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */,
+				81A1F1D51D7AE38400713D77 /* Game */,
+				81D707DF1D7232B400E5CEA5 /* CollectionView */,
 				81D707C01D6F8A6D00E5CEA5 /* Main.storyboard */,
 				81D707C61D6F8A6D00E5CEA5 /* Assets.xcassets */,
 				81D707C81D6F8A6D00E5CEA5 /* LaunchScreen.storyboard */,
@@ -86,47 +148,31 @@
 			path = ConnectFour;
 			sourceTree = "<group>";
 		};
-		81D707D91D70857000E5CEA5 /* HelperFunctions */ = {
+		81D707DA1D7231D900E5CEA5 /* GameHelperFunctions */ = {
 			isa = PBXGroup;
 			children = (
-				81D707DF1D7232B400E5CEA5 /* CollectionView */,
-				81D707DA1D7231D900E5CEA5 /* Game */,
+				81A1F1E81D7C436D00713D77 /* ManageGame.swift */,
+				81D707D71D70843000E5CEA5 /* HelperFunctions.swift */,
+				81A1F1D81D7AF19F00713D77 /* Board.swift */,
+				81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */,
 			);
-			name = HelperFunctions;
-			sourceTree = "<group>";
-		};
-		81D707DA1D7231D900E5CEA5 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				81D707D71D70843000E5CEA5 /* GameHelperFunctions.swift */,
-				81D707E01D73314D00E5CEA5 /* RangeFinders */,
-				81D707DB1D72321700E5CEA5 /* EndGame.swift */,
-			);
-			name = Game;
+			name = GameHelperFunctions;
 			sourceTree = "<group>";
 		};
 		81D707DF1D7232B400E5CEA5 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				81D707D11D6FBC0800E5CEA5 /* CollectionViewProtocol.swift */,
 				81D707D31D70755400E5CEA5 /* CollectionViewHelperFunctions.swift */,
 			);
 			name = CollectionView;
-			sourceTree = "<group>";
-		};
-		81D707E01D73314D00E5CEA5 /* RangeFinders */ = {
-			isa = PBXGroup;
-			children = (
-				81D707DD1D72328000E5CEA5 /* GameRangeFinders.swift */,
-				81D707E11D73316200E5CEA5 /* DiagonalRangeFinders.swift */,
-			);
-			name = RangeFinders;
 			sourceTree = "<group>";
 		};
 		81D707E31D7332AE00E5CEA5 /* GameLogic */ = {
 			isa = PBXGroup;
 			children = (
 				81D707D51D707B1400E5CEA5 /* GameLogic.swift */,
-				81D4CB4B1D73B60D009D9FF1 /* GameOver.swift */,
+				81A1F1D61D7AE3E000713D77 /* GameOverLogic */,
 			);
 			name = GameLogic;
 			sourceTree = "<group>";
@@ -134,6 +180,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		81A1F1DD1D7B37DF00713D77 /* ConnectFourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A1F1E51D7B37E000713D77 /* Build configuration list for PBXNativeTarget "ConnectFourTests" */;
+			buildPhases = (
+				81A1F1DA1D7B37DF00713D77 /* Sources */,
+				81A1F1DB1D7B37DF00713D77 /* Frameworks */,
+				81A1F1DC1D7B37DF00713D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81A1F1E41D7B37E000713D77 /* PBXTargetDependency */,
+			);
+			name = ConnectFourTests;
+			productName = ConnectFourTests;
+			productReference = 81A1F1DE1D7B37DF00713D77 /* ConnectFourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		81D707B81D6F8A6D00E5CEA5 /* ConnectFour */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81D707CE1D6F8A6D00E5CEA5 /* Build configuration list for PBXNativeTarget "ConnectFour" */;
@@ -161,6 +225,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jackson Ehrenworth 18";
 				TargetAttributes = {
+					81A1F1DD1D7B37DF00713D77 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 81D707B81D6F8A6D00E5CEA5;
+					};
 					81D707B81D6F8A6D00E5CEA5 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -180,11 +248,19 @@
 			projectRoot = "";
 			targets = (
 				81D707B81D6F8A6D00E5CEA5 /* ConnectFour */,
+				81A1F1DD1D7B37DF00713D77 /* ConnectFourTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		81A1F1DC1D7B37DF00713D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81D707B71D6F8A6D00E5CEA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,25 +274,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		81A1F1DA1D7B37DF00713D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A1F1E11D7B37E000713D77 /* ConnectFourTests.swift in Sources */,
+				81A1F1EB1D7C475000713D77 /* RangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81D707B51D6F8A6D00E5CEA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81D707D61D707B1400E5CEA5 /* GameLogic.swift in Sources */,
 				81D707DE1D72328000E5CEA5 /* GameRangeFinders.swift in Sources */,
-				81D707E21D73316200E5CEA5 /* DiagonalRangeFinders.swift in Sources */,
 				81D707D21D6FBC0800E5CEA5 /* CollectionViewProtocol.swift in Sources */,
 				81D707BF1D6F8A6D00E5CEA5 /* ViewController.swift in Sources */,
 				81D707BD1D6F8A6D00E5CEA5 /* AppDelegate.swift in Sources */,
+				81A1F1D91D7AF19F00713D77 /* Board.swift in Sources */,
 				81D707D41D70755400E5CEA5 /* CollectionViewHelperFunctions.swift in Sources */,
 				81D4CB4C1D73B60D009D9FF1 /* GameOver.swift in Sources */,
 				81D707C51D6F8A6D00E5CEA5 /* ConnectFour.xcdatamodeld in Sources */,
-				81D707D81D70843000E5CEA5 /* GameHelperFunctions.swift in Sources */,
-				81D707DC1D72321700E5CEA5 /* EndGame.swift in Sources */,
+				81D707D81D70843000E5CEA5 /* HelperFunctions.swift in Sources */,
+				81A1F1E91D7C436E00713D77 /* ManageGame.swift in Sources */,
+				81A1F1D41D78D74700713D77 /* Minimax.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81A1F1E41D7B37E000713D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81D707B81D6F8A6D00E5CEA5 /* ConnectFour */;
+			targetProxy = 81A1F1E31D7B37E000713D77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81D707C01D6F8A6D00E5CEA5 /* Main.storyboard */ = {
@@ -238,6 +332,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		81A1F1E61D7B37E000713D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConnectFourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JEhrenworth.ConnectFourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectFour.app/ConnectFour";
+			};
+			name = Debug;
+		};
+		81A1F1E71D7B37E000713D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConnectFourTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JEhrenworth.ConnectFourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectFour.app/ConnectFour";
+			};
+			name = Release;
+		};
 		81D707CC1D6F8A6D00E5CEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,10 +445,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = ConnectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JEhrenworth.ConnectFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
@@ -338,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = ConnectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JEhrenworth.ConnectFour;
@@ -348,6 +469,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		81A1F1E51D7B37E000713D77 /* Build configuration list for PBXNativeTarget "ConnectFourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A1F1E61D7B37E000713D77 /* Debug */,
+				81A1F1E71D7B37E000713D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81D707B41D6F8A6D00E5CEA5 /* Build configuration list for PBXProject "ConnectFour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

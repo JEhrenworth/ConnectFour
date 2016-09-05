@@ -19,19 +19,4 @@ extension ViewController {
             cell.backgroundColor = color
         }
     }
-    
-    func cellsFromIndices(indices: Array<Int>) -> Array<UICollectionViewCell> {
-        var itemAndSectionOfCells: Array<(Int, Int)> = []
-        var cells: Array<UICollectionViewCell> = []
-        
-        for index in indices {
-            let item: Int = index % 6
-            let section = (index - item) / 6
-            itemAndSectionOfCells.append((item, section))
-        }
-        
-        for (item, section) in itemAndSectionOfCells {
-            cells.append(collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: item, inSection: section))!)
-        }; return cells
-    }
 }

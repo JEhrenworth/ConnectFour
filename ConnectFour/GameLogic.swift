@@ -34,25 +34,16 @@ enum Turn {
 
 extension ViewController {
     
-    /// Returns the item and section of the first valid move in a given section, if no valid move is present returns nil.  When this is called, a cell can be extracted from the collection view.
+    /// Returns the item and section of the first valid move in a given section, if no valid move is present returns nil.
     /// - parameters:
     ///   - section: The section to use when finding a valid move.
     ///   - board: The board to use to find a valid move from.
-    func validMoveInSection(section: Int, board: Array<String>) -> (Int, Int)? {
-
-        guard let rangeOfMoves: (Int, Int) = rangeOfMovesNotUsedInSection(section, board: board) else { return nil }
+    func validMoveInSection(section: Int, board: UInt64) -> (Int, Int)? {
         
+        guard let rangeOfMoves: (Int, Int) = rangeOfItemsNotUsedInSection(section, board: board) else { return nil }
+
         let item: Int = rangeOfMoves.1
         
         return (item, section)
-    }
-    
-    /// Returns true if a square hasn't been played on.
-    /// - parameters:
-    ///   - square: The square to check for validity.
-    func squareIsValid(square: String) -> Bool {
-        if square == "" {
-            return true
-        }; return false
     }
 }
