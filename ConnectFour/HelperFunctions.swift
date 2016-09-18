@@ -14,9 +14,9 @@ extension ViewController {
     /// - parameters:
     ///   - item: The item to use when mapping.
     ///   - section: The section to use when mapping.
-    func moveForBitBoardFromIndexAndSection(item: Int, section: Int) -> Int {
+    func moveForBitBoardFromIndexAndSection(item: Int, section: Int) -> uint_fast8_t {
         let numberOfSections = 7
-        return 5 - item + section * numberOfSections
+        return uint_fast8_t(5 - item + section * numberOfSections)
     }
     
     /// Returns an array repr of the bitboard; this method uses uint_fast8_t because it can be quite a slow operation.  

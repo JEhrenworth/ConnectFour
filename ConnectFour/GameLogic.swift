@@ -38,12 +38,18 @@ extension ViewController {
     /// - parameters:
     ///   - section: The section to use when finding a valid move.
     ///   - board: The board to use to find a valid move from.
-    func validMoveInSection(section: Int, board: UInt64) -> (Int, Int)? {
+    func validMoveInSection(section: int_fast8_t, validMoves: Array<int_fast8_t>) -> (uint_fast8_t, uint_fast8_t)? {
         
-        guard let rangeOfMoves: (Int, Int) = rangeOfItemsNotUsedInSection(section, board: board) else { return nil }
+//        guard let rangeOfMoves: (Int, Int) = rangeOfItemsNotUsedInSection(section, board: board) else { return nil }
+        
+        if validMoves[Int(section)] == -1 {
+            return nil
+        } else {
+            return (uint_fast8_t(validMoves[Int(section)]), uint_fast8_t(section))
+        }
 
-        let item: Int = rangeOfMoves.1
+//        let item: Int = rangeOfMoves.1
         
-        return (item, section)
+//        return (item, section)
     }
 }

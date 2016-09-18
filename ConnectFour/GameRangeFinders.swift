@@ -17,8 +17,8 @@ extension ViewController {
     func rangeOfItemsNotUsedInSection(section: Int, board: UInt64) -> (Int, Int)? {
         let sectionRange: (Int, Int) = (0, 5)
         
-        let moveStart: Int = moveForBitBoardFromIndexAndSection(sectionRange.1, section: section)
-        let moveEnd: Int = moveForBitBoardFromIndexAndSection(sectionRange.0, section: section)
+        let moveStart: Int = Int(moveForBitBoardFromIndexAndSection(sectionRange.1, section: section))
+        let moveEnd: Int = Int(moveForBitBoardFromIndexAndSection(sectionRange.0, section: section))
         
         var boardArrayRepr: Array<uint_fast8_t> = []
         

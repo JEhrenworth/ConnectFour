@@ -12,12 +12,12 @@ extension ViewController {
     
     func manageTurn(indexPath: NSIndexPath) {
         
-        let section: Int = indexPath.section
+        let section: int_fast8_t = int_fast8_t(indexPath.section)
         
-        if let itemAndSectionOfValidMove: (Int, Int) = validMoveInSection(section, board: combinedBoard) {
+        if let itemAndSectionOfValidMove: (uint_fast8_t, uint_fast8_t) = validMoveInSection(section, validMoves: validMoves) {
             
-            let itemOfValidMove: Int = itemAndSectionOfValidMove.0
-            let sectionOfValidMove: Int = itemAndSectionOfValidMove.1
+            let itemOfValidMove: uint_fast8_t = itemAndSectionOfValidMove.0
+            let sectionOfValidMove: uint_fast8_t = itemAndSectionOfValidMove.1
             
             makePlayerMove(itemOfValidMove, section: sectionOfValidMove)
             
@@ -25,7 +25,7 @@ extension ViewController {
             combinedBoard = boardForPlayerOne | boardForPlayerTwo
             
             print(getIndexOfBestMove(boardForPlayerOne, boardForPlayerTwo: boardForPlayerTwo, turn: currentTurn, depth: 0, alpha: -NSIntegerMax, beta: NSIntegerMax))
-            
+            print(combinedBoard)
             if gameOver(currentBoard, combinedBoard: combinedBoard) {
                 handleGameOver()
             } else {
@@ -39,20 +39,24 @@ extension ViewController {
     /// - parameters:
     ///   - item: The item of the valid move.
     ///   - section: The section of the valid move.
-    func makePlayerMove(item: Int, section: Int) {
+    func makePlayerMove(item: uint_fast8_t, section: uint_fast8_t) {
+        let intItem: Int = Int(item)
+        let intSection: Int = Int(section)
         let cellToMoveOn: UICollectionViewCell = collectionView.cellForItemAtIndexPath(
-            NSIndexPath(forItem: item, inSection: section)
-            )!
+            NSIndexPath(forItem: intItem, inSection: intSection)
+        )!
         
         cellToMoveOn.backgroundColor = currentTurn.color()
         
-        let bitMove = moveForBitBoardFromIndexAndSection(item, section: section)
+        let bitMove: uint_fast8_t = moveForBitBoardFromIndexAndSection(intItem, section: intSection)
+        
+        validMoves[intSection] = int_fast8_t(intItem - 1)
         
         if currentTurn == Turn.PlayerOne {
-            boardForPlayerOne[bitMove] = 1
+            boardForPlayerOne[Int(bitMove)] = 1
         } else {
-            boardForPlayerTwo[bitMove] = 1
-        }
+            boardForPlayerTwo[Int(bitMove)] = 1
+        }; print(validMoves)
     }
     
     func handleGameOver() {
@@ -71,6 +75,7 @@ extension ViewController {
         currentBoard = UInt64()
         boardForPlayerOne = UInt64()
         boardForPlayerTwo = UInt64()
+        validMoves = Array<int_fast8_t>()
         
         connectFourLabel.text = "Connect Four"
         currentTurn = Turn.PlayerOne

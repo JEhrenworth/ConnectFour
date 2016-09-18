@@ -28,7 +28,7 @@ extension ViewController {
     func hasNumberOfMovesInARow(board: UInt64, numberOfMoves: UInt64) -> Bool {
         
         if numberOfMoves < 2 {
-            assertionFailure("numberOfMoves must be greater than one ")
+            assertionFailure("numberOfMoves must be greater than one.")
         }
         
         let diagonalOne: UInt64 = board & (board >> 6)
@@ -40,9 +40,9 @@ extension ViewController {
         let verticalShift: UInt64 = shiftMultiplier
         
         let diagonalOneCheck: UInt64 = diagonalOne & (diagonalOne >> (shiftMultiplier * 6)) // check \ diagonal
-        let horizontalCheck: UInt64 = horizontal & (horizontal >> (shiftMultiplier * 7))   // check horizontal -
+        let horizontalCheck: UInt64 = horizontal & (horizontal >> (shiftMultiplier * 7))
         let diagonalTwoCheck: UInt64 = diagonalTwo & (diagonalTwo >> (shiftMultiplier * 8)) // check / diagonal
-        let verticalCheck: UInt64 = vertical & (vertical >> verticalShift)           // check vertical |
+        let verticalCheck: UInt64 = vertical & (vertical >> verticalShift)           
         
         if diagonalOneCheck != 0 || horizontalCheck != 0 || diagonalTwoCheck != 0 || verticalCheck != 0 {
             return true
@@ -53,6 +53,8 @@ extension ViewController {
     /// - parameters: 
     ///   - board: The board to check for a draw on.
     func draw(board: UInt64) -> Bool {
+//        let topFilled: UInt64 = 0b000001000000100000010000001000000100000010000001
+//                                  123456789123456789123456789123456789123456789123
         let bitsNeverUsedOnBoard: UInt64 = 0b0000010000001000000100000010000001000000100000011111111111111111
         let drawBoard: UInt64 = 0b1111111111111111111111111111111111111111111111111111111111111111
         let draw = (board | bitsNeverUsedOnBoard) == drawBoard

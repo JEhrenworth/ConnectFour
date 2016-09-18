@@ -18,12 +18,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var currentTurn: Turn = Turn.PlayerOne
     
-    var indexOfBestMove: Int = Int()
+    var indexOfBestMove: uint_fast8_t = uint_fast8_t()
     
     var currentBoard: UInt64 = UInt64()
     var combinedBoard: UInt64 = UInt64()
     var boardForPlayerOne: UInt64 = UInt64()
     var boardForPlayerTwo: UInt64 = UInt64()
+    var validMoves: Array<int_fast8_t> = Array<int_fast8_t>(count: 7, repeatedValue: 5)
     
     override func viewDidLoad() {
         super.viewDidLoad()
